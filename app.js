@@ -24,9 +24,13 @@ var context = require("./graphql/context");
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/cacsffutmx", {
-  useNewUrlParser: true,
-});
+mongoose.connect(
+  process.env.MONGODB_URI ||
+    "mongodb+srv://admin:Abiodun1@cacsffutmx.tcocy.mongodb.net/cacsffutmx?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+  }
+);
 
 // mongoose.connect(
 //     "mongodb+srv://emmanuelite4:<Abiodun1>@cacsffutmx-tcocy.mongodb.net/test?retryWrites=true&w=majority"
