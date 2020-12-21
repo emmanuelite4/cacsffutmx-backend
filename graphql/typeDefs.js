@@ -98,6 +98,11 @@ const typeDefs = gql`
     id: String
     name: String
   }
+  type File {
+    filename: String!
+    mimetype: String!
+    encoding: String!
+  }
   input insert_user {
     name: String
     email: String
@@ -217,6 +222,7 @@ const typeDefs = gql`
     updateAnnouncement(data: announcement_insert): Announcement
     deleteAnnouncement(id: String): Announcement
     addEvent(data: event_insert): Event
+    upload(file: Upload!): File!
   }
 `;
 

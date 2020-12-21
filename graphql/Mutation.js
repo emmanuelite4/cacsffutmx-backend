@@ -312,6 +312,15 @@ const Mutation = {
     console.log(response);
     return response;
   },
+  upload: async (parent, file) => {
+    const { stream, filename, mimetype, encoding } = await file;
+
+    // Do work 💪
+
+    console.log(file);
+
+    return { filename, mimetype, encoding };
+  },
 };
 
 module.exports = Mutation;
